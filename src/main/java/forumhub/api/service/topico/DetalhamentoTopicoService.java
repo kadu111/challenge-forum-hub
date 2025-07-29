@@ -20,8 +20,8 @@ public class DetalhamentoTopicoService {
                 t.getId(),
                 t.getTitulo(),
                 t.getMensagem(),
-                t.getAutor().getNome(), // assumindo autor é Usuario
-                t.getCurso()
+                t.getAutor().getNome(),
+                t.getCurso().getNome()
         ));
     }
 }

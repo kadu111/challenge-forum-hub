@@ -3,6 +3,7 @@ package forumhub.api.domain.topico;
 import forumhub.api.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
+import forumhub.api.domain.curso.Curso;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
         @UniqueConstraint(columnNames = {"titulo", "mensagem"})
 })
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -28,14 +30,17 @@ public class Topico {
     @JoinColumn(name = "autor_id")
     private Usuario autor;
 
-    private String curso;
+    @ManyToOne
+    @JoinColumn(name = "curso_id")
+    private Curso curso;
+
 
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
 
-    public Topico(Long id, String titulo, String mensagem, Usuario autor, String curso) {
+    public Topico(Long id, String titulo, String mensagem, Usuario autor, Curso curso) {
         this.id = id;
         this.titulo = titulo;
         this.mensagem = mensagem;

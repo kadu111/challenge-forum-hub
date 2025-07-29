@@ -1,15 +1,16 @@
-package forumhub.api.domain.usuario;
+package forumhub.api.domain.curso;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "curso")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Usuario {
+public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +18,5 @@ public class Usuario {
 
     private String nome;
 
-    @Column(unique = true)
-    private String email;
-
-    private String senha;
+    private String categoria;
 }

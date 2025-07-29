@@ -22,7 +22,7 @@ public record DadosListagemTopico(
                 topico.getDataCriacao(),
                 topico.getStatus(),
                 topico.getAutor().getNome(),
-                topico.getCurso()
+                topico.getCurso().getNome()
         );
     }
 }

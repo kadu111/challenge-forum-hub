@@ -6,5 +6,5 @@ public record DadosCadastroTopico(
         @NotBlank String titulo,
         @NotBlank String mensagem,
         @NotBlank Long autorId,
-        @NotBlank String curso
+        @NotBlank Long cursoId
 ) {}
