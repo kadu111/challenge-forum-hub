@@ -2,7 +2,7 @@ package forumhub.api.controller;
 
 import forumhub.api.dto.usuario.DadosCadastroUsuario;
 import forumhub.api.dto.usuario.DadosDetalhamentoUsuario;
-import forumhub.api.service.usuario.CadastroUsuarioService;
+import forumhub.api.infra.service.usuario.CadastroUsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

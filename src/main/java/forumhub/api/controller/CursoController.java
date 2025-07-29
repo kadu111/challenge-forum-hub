@@ -2,8 +2,8 @@ package forumhub.api.controller;
 
 import forumhub.api.dto.curso.DadosCadastroCurso;
 import forumhub.api.dto.curso.DadosDetalhamentoCurso;
-import forumhub.api.service.curso.CadastroCursoService;
-import forumhub.api.service.curso.ListagemCursoService;
+import forumhub.api.infra.service.curso.CadastroCursoService;
+import forumhub.api.infra.service.curso.ListagemCursoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

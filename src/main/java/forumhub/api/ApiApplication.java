@@ -10,6 +10,7 @@ public class ApiApplication {
 	public static void main(String[] args) {
 		Dotenv dotenv = Dotenv.load();
 		System.setProperty("DB_PASSWORD", dotenv.get("DB_PASSWORD"));
+		System.setProperty("PASSWORD_SECRET",dotenv.get("PASSWORD_SECRET"));
 		SpringApplication.run(ApiApplication.class, args);
 	}
 

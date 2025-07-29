@@ -1,4 +1,4 @@
-package forumhub.api.service.curso;
+package forumhub.api.infra.service.curso;
 
 import forumhub.api.domain.curso.CursoRepository;
 import forumhub.api.dto.curso.DadosDetalhamentoCurso;

@@ -1,4 +1,4 @@
-package forumhub.api.service.topico;
+package forumhub.api.infra.service.topico;
 
 import forumhub.api.domain.curso.CursoRepository;
 import forumhub.api.domain.topico.Topico;

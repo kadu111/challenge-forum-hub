@@ -1,4 +1,4 @@
-package forumhub.api.service.usuario;
+package forumhub.api.infra.service.usuario;
 
 import forumhub.api.domain.usuario.Usuario;
 import forumhub.api.dto.usuario.DadosCadastroUsuario;
@@ -16,6 +16,6 @@ public class CadastroUsuarioService {
     public DadosDetalhamentoUsuario cadastrar(DadosCadastroUsuario dados) {
         var usuario = new Usuario(null, dados.nome(), dados.email(), dados.senha());
         repository.save(usuario);
-        return new DadosDetalhamentoUsuario(usuario.getId(), usuario.getNome(), usuario.getEmail());
+        return new DadosDetalhamentoUsuario(usuario.getId(), usuario.getNome(), usuario.getLogin());
     }
 }

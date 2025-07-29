@@ -1,14 +1,13 @@
 package forumhub.api.controller;
 
-import forumhub.api.domain.topico.Topico;
 import forumhub.api.domain.topico.TopicoRepository;
 import forumhub.api.dto.topico.DadosAtualizacaoTopico;
 import forumhub.api.dto.topico.DadosCadastroTopico;
 import forumhub.api.dto.topico.DadosDetalhamentoTopico;
-import forumhub.api.service.topico.AtualizacaoTopicoService;
-import forumhub.api.service.topico.CadastroTopicoService;
-import forumhub.api.service.topico.DetalhamentoTopicoService;
-import forumhub.api.service.topico.ExclusaoTopicoService;
+import forumhub.api.infra.service.topico.AtualizacaoTopicoService;
+import forumhub.api.infra.service.topico.CadastroTopicoService;
+import forumhub.api.infra.service.topico.DetalhamentoTopicoService;
+import forumhub.api.infra.service.topico.ExclusaoTopicoService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
